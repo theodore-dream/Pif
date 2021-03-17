@@ -1,0 +1,9 @@
+	ONE
+	TWO
+	THREE
+	pee
+	FIVE
+	DIX
+	EVEN
+	EIN
+
