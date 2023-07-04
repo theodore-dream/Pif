@@ -2,7 +2,6 @@
 # and not just using DEMO_OPTS as a crutch
 # standalone pif script for functional demo
 
-pi@pi:~/Documents/pif-ai-luma $ cat luma-integrate/pif2.py
 #!/bin/env python3
 
 import os, random
@@ -28,15 +27,15 @@ from PIL import ImageFont, ImageDraw
 
 def main():
 
-    poemdir = random.choice(os.listdir("/home/pi/Documents/pif-ai-luma/luma-integrate/test/"))
-    randompoem = "/home/pi/Documents/pif-ai-luma/luma-integrate/test/" + poemdir
+    poemdir = random.choice(os.listdir("/home/pi/Documents/Pif/pif_poems/"))
+    randompoem = "/home/pi/Documents/Pif/pif_poems/" + poemdir
 
     blurb = open(randompoem,"r").read()
     virtual = viewport(device, width=device.width, height=768)
 
     for _ in range(1):
         with canvas(device) as draw:
-            font = ImageFont.truetype('/home/pi/Documents/pif-ai-luma/luma-integrate/fonts/pixelmix.ttf',9)
+            font = ImageFont.truetype('/home/pi/Documents/Pif/luma.examples/examples/fonts/pixelmix.ttf',9)
             for i, line in enumerate(blurb.split("\n")):
                 draw.text((0, 0 + (i * 12)), text=line, font=font, fill="white")
 
